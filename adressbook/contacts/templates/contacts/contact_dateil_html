@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Detail</title>
+</head>
+<body>
+    <h1>Contact Detail</h1>
+    <p>Name: {{ contact.first_name }} {{ contact.last_name }}</p>
+    <p>Middle Name: {{ contact.middle_name }}</p>
+    <p>Phone: {{ contact.phone }}</p>
+    <p>Email: {{ contact.email }}</p>
+    <p>Birthdate: {{ contact.birthdate }}</p>
+    {% if contact.photo %}
+        <img src="{{ contact.photo.url }}" alt="{{ contact.first_name }} {{ contact.last_name }} Photo">
+    {% endif %}
+</body>
+</html>
